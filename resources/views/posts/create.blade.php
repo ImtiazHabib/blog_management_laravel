@@ -9,11 +9,8 @@
                         <h1>
                             Add New Post
                         </h1>
-                        <form>
-                            <div class="mb-3">
-                                <label  class="form-label">Post Name</label>
-                                <input type="text" class="form-control" name="name">
-                            </div>
+                        <form  action="{{ route('create_post') }}" method="POST">
+                            @csrf
                             <div class="mb-3">
                                 <label  class="form-label">Post Name</label>
                                 <input type="text" class="form-control" name="name">
@@ -27,7 +24,7 @@
                                 <input type="date" class="form-control" name="date">
                             </div>
                             {{-- login user will id here  --}}
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Add</button>
                         </form>
                     </div>
                 </div>

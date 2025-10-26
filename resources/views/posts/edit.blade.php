@@ -9,26 +9,27 @@
                         <h1>
                            Edit  Post
                         </h1>
-                        <form>
+                        @foreach ($posts as $post )
+                             <form action="{{ route('update_post') }}" method="POST">
+                                @csrf
                             <div class="mb-3">
                                 <label  class="form-label">Post Name</label>
-                                <input type="text" class="form-control" name="name">
-                            </div>
-                            <div class="mb-3">
-                                <label  class="form-label">Post Name</label>
-                                <input type="text" class="form-control" name="name">
+                                <input type="text" class="form-control" name="name" value="{{ $post->name }}">
                             </div>
                             <div class="mb-3">
                                 <label  class="form-label">Post description</label>
-                                <input type="text" class="form-control" name="description">
+                                <input type="text" class="form-control" name="description" value="{{ $post->description }}">
                             </div>
                             <div class="mb-3">
                                 <label  class="form-label">Post  Date</label>
-                                <input type="date" class="form-control" name="date">
+                                <input type="date" class="form-control" name="date" value="{{ $post->date }}">
                             </div>
                             {{-- login user will id here  --}}
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                             <input type="hidden"  name="post_id" value="{{ $post->id }}">
+                            <button type="submit" class="btn btn-primary">edit</button>
                         </form>
+                        @endforeach
+                       
                     </div>
                 </div>
             </div>

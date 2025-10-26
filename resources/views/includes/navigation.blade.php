@@ -12,10 +12,10 @@
                                             <a class="nav-link " aria-current="page" href="{{ route('index.name') }}">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('post.manage') }}">All Posts</a>
+                                            <a class="nav-link" href="{{ route('manage_post') }}">All Posts</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('post.create') }}">Add New Post</a>
+                                            <a class="nav-link" href="{{ route('create_post_page') }}">Add New Post</a>
                                         </li>
 
                                         <li class="nav-item">
