@@ -65,6 +65,15 @@ return [
             'replace_placeholders' => true,
         ],
 
+        
+
+        'auth_error' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/auth_error.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'replace_placeholders' => true,
+        ],
+
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),

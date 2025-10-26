@@ -7,6 +7,7 @@
                 <div class="col-md-12">
                     <div class="main_section_inner">
                         <table class="table table-striped">
+                            
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
