@@ -25,6 +25,13 @@
                                 <input type="date" class="form-control" name="date" value="{{ $post->date }}">
                             </div>
                             {{-- login user will id here  --}}
+                            {{-- login user will id here  --}}
+
+                               @if(Auth::check())
+       <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+   @else
+       <p>Please log in to create a post.</p>
+   @endif
                              <input type="hidden"  name="post_id" value="{{ $post->id }}">
                             <button type="submit" class="btn btn-primary">edit</button>
                         </form>

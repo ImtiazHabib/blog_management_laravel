@@ -6,6 +6,7 @@ use Throwable;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -18,6 +19,9 @@ class PostController extends Controller
     }
 
      public function create_post(Request $request){
+
+          
+
         $request->validate([
              'name' =>['required'],
              'description' =>['required'],
@@ -28,6 +32,7 @@ class PostController extends Controller
         $post->name = $request->name;
         $post->description = $request->description;
         $post->date = $request->date;
+        $post->user_id = $request->user_id;
 
         $post->save();
 
@@ -62,6 +67,7 @@ class PostController extends Controller
                 'name' =>$request->name,
                 'description' =>$request->description,
                 'date' =>$request->date,
+                'user_id' =>$request->user_id,
           ]);
 
         
