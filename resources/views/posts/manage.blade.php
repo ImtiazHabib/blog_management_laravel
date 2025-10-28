@@ -28,16 +28,22 @@
                                         <td>{{  $post->date }}</td>
                                         <td>{{  $post->user->name }}</td>
                                         <td>
-                                            <form action="{{ route('edit_post', $post->id) }}" method="GET">
+
+                                            @can('update', $post)
+                                                <form action="{{ route('edit_post', $post->id) }}" method="GET">
                                                 @csrf
                                                 <button type="submit" class="btn btn-success">Edit</button>
                                             </form>
-
-                                            <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                            @endcan
+                                            
+                                            @can('delete',$post)
+                                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal{{ $post->id }}">
                                         Delete
                                     </button>
+                                            @endcan
+                                            <!-- Button trigger modal -->
+                                  
                                         </td>
                                     </tr>
 

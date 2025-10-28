@@ -11,23 +11,30 @@
                                         <li class="nav-item">
                                             <a class="nav-link " aria-current="page" href="{{ route('index.name') }}">Home</a>
                                         </li>
-                                        <li class="nav-item">
+                                     
+                                            <li class="nav-item">
                                             <a class="nav-link" href="{{ route('manage_post') }}">All Posts</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ route('create_post_page') }}">Add New Post</a>
                                         </li>
-
-                                        <li class="nav-item">
+                                         <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+                                        </li>
+                                        
+                                              <li class="nav-item">
                                             <a class="nav-link" href="{{ route('login_page') }}">Login</a>
                                         </li>
 
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ route('register_page') }}">Register</a>
                                         </li>
-                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('logout') }}">Logout</a>
-                                        </li>
+                                       
+                                        
+                                        
+
+                                      
+                                        
                                     </ul>
                                 </div>
                             </div>
